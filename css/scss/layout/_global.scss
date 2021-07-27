@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: {
+    family: 'Be Vietnam', sans-serif;
+    size: $Fontsize;
+    weight: 400;
+  }
+}
+
+.page {
+  overflow: hidden;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: $DarkGrayishBlue;
+  line-height: 1.6;
+  @include maxMedia(767) {
+    line-height: 1.8;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $DarkBlue;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: none;
+}

@@ -1,0 +1,11 @@
+@mixin maxMedia($maxW) {
+  @media(max-width: $maxW#{"px"}) {
+    @content;
+  }
+}
+
+@mixin minMedia($minW) {
+  @media(min-width: $minW#{"px"}) {
+    @content;
+  }
+}

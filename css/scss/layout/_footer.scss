@@ -1,0 +1,117 @@
+.footer {
+  background-color: $VeryDarkBlue;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    @include maxMedia(767) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      @include maxMedia(767) {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .logo-area {
+      width: 25%;
+      gap: 70px;
+      @include maxMedia(767) {
+        flex-direction: column-reverse;
+      }
+      .social-links {
+        display: flex;
+        gap: 10px;
+        @include maxMedia(767) {
+          width: 100%;
+          justify-content: space-evenly;
+        }
+        .icon {
+          &:hover path {
+            transition: .2s;
+            fill: $BrightRed;
+          }
+        }
+      }
+    }
+    .links-area {
+      flex-direction: row;
+      width: 50%;
+      gap: 200px;
+      @include maxMedia(991) {
+        gap: 80px;
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .link {
+          color: $VaryLightGray;
+          font-size: $Fontsize - 3px;
+          transition: .2s;
+          &:hover {
+            color: $BrightRed
+          }
+        }
+      }
+    }
+    .sub-area {
+      width: 25%;
+      gap: 70px;
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        .text {
+          padding: 15px;
+          border: none;
+          outline: none;
+          border-radius: 30px;
+          font-size: $Fontsize - 2px;
+        }
+        .submit {
+          box-shadow: none;
+        }
+        .validition {
+          position: absolute;
+          left: 0;
+          bottom: -20px;
+          font-size: $Fontsize - 4px;
+          color: $BrightRed;
+          display: none;
+        }
+        &.error {
+          .text {
+            color: $BrightRed;
+            border: 1px solid $BrightRed;
+          }
+          .validition {
+            display: block;
+          }
+        }
+      }
+      .copy {
+        font-size: $Fontsize - 3px;
+        text-align: right;
+        color: rgba($color: $DarkGrayishBlue, $alpha: .5);
+        @include maxMedia(767) {
+          position: absolute;
+          bottom: -40px;
+          left: 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

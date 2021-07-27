@@ -1,0 +1,10 @@
+nav
+  .overlay
+  .container
+    img(class="logo" src="./images/logo.svg", alt="logo - manage")
+    ul.list
+      - let content = ["Pricing", "Product", "About Us", "Careers", "Community"]
+      each item in content
+        li.list-item: a(href="#")= item 
+    button.btn-orange Get Started
+    img.icon(src="./images/icon-hamburger.svg", alt="burger - icon")
